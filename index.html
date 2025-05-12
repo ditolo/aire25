@@ -22,11 +22,9 @@
   <style>
     * {
       font-family: Arial, Helvetica, sans-serif;
-      text-align: center;
-      font-size: 0, 5rem;
+      font-size: 3vw;
       color: rgb(0, 0, 0);
       border-radius: 5px;
-      justify-content: center;
       margin: 0;
       padding: 0;
       word-break: normal;
@@ -38,6 +36,7 @@
       margin: 2vw;
     }
 
+
     nav {
       grid-area: nav;
       display: flex;
@@ -45,31 +44,43 @@
       background-color: var(--lvl0bg);
       justify-content: space-around;
       box-shadow: var(--shadowstd);
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(167, 115, 115);
+      padding: 1rem;
+      margin: 2vw;
     }
 
     main p {
-      display: flex;
       text-align: left;
+      margin-top: 3vw;
+      display: none;
     }
 
     main h2 {
       background-color: rgb(204, 118, 118);
+      padding: 1vw;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
     }
 
     article {
-      border-radius: 1px;
-      border-color: black;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(167, 115, 115);
       margin: 2vw;
-      padding: 1vw;
-    }
-
-    p {
-      margin-top: 2vw;
     }
 
     .phonecontainer {
-      border-color: black;
+      border: 1px, black;
       background-color: beige;
+    }
+
+    button {
+      padding-left: 2vw;
+      padding-right: 2vw;
+      border-radius: 2rem;
     }
   </style>
 </head>
@@ -92,9 +103,10 @@
   <main>
     <article>
       <h2>
-        Welcome ADDRESS
+        Welcome ADDRESS <button type="button" onclick="showhide('pwelcome')">Show</button>
       </h2>
-      <p>
+
+      <p id="pwelcome">
         Dear colleagues, dear aviators, dear friends:<br><br>
         On behalf of the Spanish Air and Space Chief of Staff, as Commander of San Javier Air Base, home of the Air and
         Space Force Academy, receive my warmest welcome to this unique location nearby the Mar Menor.
@@ -121,8 +133,8 @@
       </p>
     </article>
     <article>
-      <h2>SCOPE</h2>
-      <p>
+      <h2>SCOPE <button type="button" onclick="showhide('pscope')">Show</button></h2>
+      <p id="pscope">
         The aim of this Aircrew guide is to establish common procedures and information to all participants in order to
         obtain safe and expeditious air operations throughout the Patrulla Águila´s 40th Anniversary Air Show (Aire
         25).<br><br>
@@ -145,8 +157,8 @@
       </p>
     </article>
     <article>
-      <h2>Contact Information</h2>
-      <p class="phonecontainer">
+      <h2>Contact Information<button type="button" onclick="showhide('pcontact')">Show</button></h2>
+      <p class="phonecontainer" id="pcontact">
         San Javier AB +34 968 189 000<br>
         40th Anniversary Director Lt. Col. Joaquín Aguirre 868 2400<br>
         Mobile: +34 639 66 81 18<br><br>
@@ -175,7 +187,6 @@
         IN CASE OF EMERGENCY - 112 <br><br>
         From an internal phone dial the prefix (3numbers) + the extension (4 numbers).
         If you call from outside, dial 968 189 XXX (the three last numbers of the extension).
-
       </p>
     </article>
   </main>
