@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Esta es una página realizada como ejercicio de programación HTML + CSS">
+  <meta name="description" content="Crew info for Aire 25">
   <meta name="author" content="Diego Torcal">
-  <meta name="keywords" content="portfolio">
-  <title>Mi Portafolio</title>
+  <meta name="keywords" content="aire25">
+  <title>Crew Info</title>
   <link rel="stylesheet" href="style.css">
   <script>
     function showhide(param) {
@@ -74,8 +74,11 @@
     button {
       padding-left: 2vw;
       padding-right: 2vw;
-      border-radius: 2rem;
+      border-radius: 1vw;
+      background-color: transparent;
     }
+
+
 
     h1 {
       padding: 2vw;
@@ -359,28 +362,61 @@
           Monday 16th Departures
         </p>
       </article>
-      <article>
-        <h2></h2>
-        <p></p>
-      </article>
     </section>
     <h1>AIRBASE OPS<button type="button" onclick="showhide('opssection')">O</button></h1>
     <section id="opssection">
       <article>
-        <h2>ARRIVAL</h2>
-        <h3>ARRIVAL SLOT TIMES</h3>
-        <p>Arrivals should be planned on Thursday 12th and Friday 13th June.
-          Arrival and departure slots will be assigned according to requests drawn from Questionnaire (Aire25 website)
-          and taking into account possible rehearsal events. Display Director’s Flying schedule will be accessible at
-          the Current Ops Desk
+        <h2>ARRIVAL<button type="button" onclick="showhide('darrival')">O</button></h2>
+        <div id="darrival">
+          <h3>ARRIVAL SLOT TIMES</h3>
+          <p>Arrivals should be planned on Thursday 12th and Friday 13th June.
+            Arrival and departure slots will be assigned according to requests drawn from Questionnaire (Aire25 website)
+            and taking into account possible rehearsal events. Display Director’s Flying schedule will be accessible at
+            the Current Ops Desk
+          </p>
+          <h3>ARRIVAL PROCEDURES</h3>
+          <p>Inbound aircraft will be vectored by Barcelona MIL or Valencia RDR. In the vicinity of San Javier CTA will
+            switch to San Javier APP.
+            VMC – VFR entry point (Cabo de Palos / VFR Holding Charlie) to Initial both RWY´s (Break to the sea side,
+            east
+            bound)
+            <img src="/pictures/arrival.png" alt="arrival">
+            <a href="https://aip.enaire.es/AIP/AIP-es.html#LELC" target="_blank">IFR approach plates</a>
+          </p>
+          <h3>AIRCRAFT PARKING</h3>
+          <p>General overview</p>
+          <img src="/pictures/parking1.png" alt="parking1">
+          <p><br><br>Parking Friday 13th</p>
+          <img src="/pictures/parking2.png" alt="parking2">
+          <p><br><br>PARKING SATURDAY 14TH AND SUNDAY 15TH</p>
+          <img src="/pictures/parking3.png" alt="parking3">
+          <p><br><br>STATIC DISPLAY</p>
+          <img src="" alt="">
+        </div>
+      </article>
+      <article>
+        <h2>FLIGHT PLAN/PPR</h2>
+        <p>The organization will manage the rehearsal/display flight plans.
+          To land at San Javier AB you need a PPR number (Prior Permission Required).
+          The PPR request shall be addressed to San Javier Base OPS: <br>
+          prep_vuelos_sanjavier@ea.mde.es <br>
+          Comm. +34 968 189 148 <br><br>
+          Following your PPR request and once your Questionnaire has been fully received and verified, Flying Ops will
+          provide: <br>
+          - PPR NUMBER <br>
+          - ARRIVAL SLOT (as requested or tasked by Base OPS)
         </p>
-        <h3>ARRIVAL PROCEDURES</h3>
-        <p>Inbound aircraft will be vectored by Barcelona MIL or Valencia RDR. In the vicinity of San Javier CTA will
-          switch to San Javier APP.
-          VMC – VFR entry point (Cabo de Palos / VFR Holding Charlie) to Initial both RWY´s (Break to the sea side, east
-          bound)
-          <img src="/pictures/arrival.png" alt="arrival">
-        </p>
+      </article>
+      <article>
+        <h2>DIVERSION AIRFIELDS<button type="button" onclick="showhide('ddiversion')">O</button></h2>
+        <div id="ddiversion">
+          <p>Albacete Air Base (LEAB) must be considered the primary diversion field for participants. However,
+            participants are allowed to take Murcia International (LEMI) as diversion airfield, if needed.
+            Alicante/Almería would be used in case of extreme necessity.
+            Alcantarilla (LERI) must be considered the primary diversion field for PROPELLERS.
+          </p>
+          <img src="/pictures/diversion.png" alt="diversion">
+        </div>
       </article>
     </section>
   </main>
