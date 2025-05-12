@@ -31,12 +31,6 @@
       overflow-wrap: break-word;
     }
 
-    h1 {
-      padding: 2vw;
-      margin: 2vw;
-    }
-
-
     nav {
       grid-area: nav;
       display: flex;
@@ -54,11 +48,11 @@
     main p {
       text-align: left;
       padding: 2vw;
-      display: none;
+      display: block;
     }
 
     main h2 {
-      background-color: rgb(204, 118, 118);
+      background-color: rgb(230, 175, 175);
       padding: 1vw;
       text-align: center;
       display: flex;
@@ -82,6 +76,25 @@
       padding-right: 2vw;
       border-radius: 2rem;
     }
+
+    h1 {
+      padding: 2vw;
+      margin: 2vw;
+      color: rgb(247, 222, 222);
+      background-color: rgb(192, 61, 61);
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+
+    }
+
+    section {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+    }
   </style>
 </head>
 
@@ -91,146 +104,284 @@
       <img class="logotd" src="public/imagenes/TDCodeLogoInkPlano.svg" alt="">
       <img class="retratotd" src="public/imagenes/ImagenVector.svg" alt="">
     </div>
-    <h1>Welcome to Aire 25</h1>
   </header>
 
-  <nav>
-    <a href="#welcome">Welcome</a>
-    <a href="#Arrival">Arrival</a>
-    <a href="#DisplayRegulations">Display Regulations</a>
-    <a href="#Emergency">Emergency</a>
-  </nav>
   <main>
-    <article>
-      <h2>
-        Welcome ADDRESS <button type="button" onclick="showhide('pwelcome')">Show</button>
-      </h2>
+    <hero>
+      <img src="/pictures/logo.png" alt="logo" />
+    </hero>
+    <h1>WELCOME!<button type="button" onclick="showhide('welcomesection')">O</button></h1>
+    <section id="welcomesection">
 
-      <p id="pwelcome">
-        Dear colleagues, dear aviators, dear friends:<br><br>
-        On behalf of the Spanish Air and Space Chief of Staff, as Commander of San Javier Air Base, home of the Air and
-        Space Force Academy, receive my warmest welcome to this unique location nearby the Mar Menor.
-        Welcome to “Aire-25”, the greatest airshow to celebrate the 40th anniversary of the Spanish acrobatic team
-        “Patrulla Águila”. An incredible four decades have flown by since a group of courageous fighter pilots created
-        this team in 1985 and started to perform airshows all over the world and became Spanish ambassadors painting the
-        skies with our national flag. During this special weekend it’s time to recognize these heroes and share with
-        them a remarkable celebration accompanied with other sister acrobatic teams, many aviators and general public
-        from everywhere.<br><br>
-        This “Aire-25” airshow has been organized by the Spanish Air and Space Force, as a whole, with the support of
-        the surrounding towns of San Javier, San Pedro del Pinatar, Los Alcázares and also with the support of local and
-        regional authorities, and it will be seen by half a million people around the beaches of Mar Menor. It’s going
-        to be a blast!!<br><br>
-        Along with this Display Order, we have enclosed all the necessary information and procedures needed to safely
-        and efficiently participate in “Aire-25”. If you have any further questions or concerns, please do not hesitate
-        to contact your designated POC.<br><br>
-        I look forward to saluting you in person, wishing you a successful and safe Aire-25 airshow and a joyful stay in
-        this beautiful Murcia region.<br><br>
+      <article>
+        <h2>
+          Welcome ADDRESS <button type="button" onclick="showhide('pwelcome')">Show</button>
+        </h2>
 
-        Col. Luis Felipe González Asenjo<br><br>
-        Spanish Air Force and Space Academy Director<br><br>
-        AIRE - 25 / Patrulla Aguila 40th Anniversary Airshow Director<br><br>
+        <p id="pwelcome">
+          Dear colleagues, dear aviators, dear friends:<br><br>
+          On behalf of the Spanish Air and Space Chief of Staff, as Commander of San Javier Air Base, home of the Air
+          and
+          Space Force Academy, receive my warmest welcome to this unique location nearby the Mar Menor.
+          Welcome to “Aire-25”, the greatest airshow to celebrate the 40th anniversary of the Spanish acrobatic team
+          “Patrulla Águila”. An incredible four decades have flown by since a group of courageous fighter pilots created
+          this team in 1985 and started to perform airshows all over the world and became Spanish ambassadors painting
+          the
+          skies with our national flag. During this special weekend it’s time to recognize these heroes and share with
+          them a remarkable celebration accompanied with other sister acrobatic teams, many aviators and general public
+          from everywhere.<br><br>
+          This “Aire-25” airshow has been organized by the Spanish Air and Space Force, as a whole, with the support of
+          the surrounding towns of San Javier, San Pedro del Pinatar, Los Alcázares and also with the support of local
+          and
+          regional authorities, and it will be seen by half a million people around the beaches of Mar Menor. It’s going
+          to be a blast!!<br><br>
+          Along with this Display Order, we have enclosed all the necessary information and procedures needed to safely
+          and efficiently participate in “Aire-25”. If you have any further questions or concerns, please do not
+          hesitate
+          to contact your designated POC.<br><br>
+          I look forward to saluting you in person, wishing you a successful and safe Aire-25 airshow and a joyful stay
+          in
+          this beautiful Murcia region.<br><br>
 
-      </p>
-    </article>
-    <article>
-      <h2>SCOPE <button type="button" onclick="showhide('pscope')">Show</button></h2>
-      <p id="pscope">
-        The aim of this Aircrew guide is to establish common procedures and information to all participants in order to
-        obtain safe and expeditious air operations throughout the Patrulla Águila´s 40th Anniversary Air Show (Aire
-        25).<br><br>
+          Col. Luis Felipe González Asenjo<br><br>
+          Spanish Air Force and Space Academy Director<br><br>
+          AIRE - 25 / Patrulla Aguila 40th Anniversary Airshow Director<br><br>
 
-        Air operations comprise arrivals and departures of all aircraft, including supporting aircraft, as well as
-        static, rehearsal and display flights.<br><br>
+        </p>
+      </article>
+      <article>
+        <h2>SCOPE <button type="button" onclick="showhide('pscope')">Show</button></h2>
+        <p id="pscope">
+          The aim of this Aircrew guide is to establish common procedures and information to all participants in order
+          to
+          obtain safe and expeditious air operations throughout the Patrulla Águila´s 40th Anniversary Air Show (Aire
+          25).<br><br>
 
-        The guide has been divided in four main sections:<br><br>
-        ADMIN<br>
-        In this section you will find details about diplomatic clearance, arrival and departure admin, general facility
-        layout, etc.<br><br>
-        AIRBASE OPS<br>
-        This section provides all approach and departure charts for San Javier as well as the main alternates during the
-        Air Show.<br><br>
-        DISPLAY ORDER<br>
-        This section guides you through the regulations, limitations and instructions that each participant shall comply
-        with during the Air Show.<br><br>
-        EMERGENCIES<br>
-        FLIGHT AND SPECTATORS SAFETY is paramount!
-      </p>
-    </article>
-    <article>
-      <h2>Contact Information<button type="button" onclick="showhide('pcontact')">Show</button></h2>
-      <p class="phonecontainer" id="pcontact">
-        San Javier AB +34 968 189 000<br><br>
-        40th Anniversary Director<br>Lt. Col. Joaquín Aguirre<br>Internal: 868 2400<br>
-        Mobile: +34 639 66 81 18<br><br>
-        DISPLAY<br>
-        Display Director<br>
-        Lt. Col. Carellán<br>
-        Mobile: +34 619 33 10 18<br><br>
+          Air operations comprise arrivals and departures of all aircraft, including supporting aircraft, as well as
+          static, rehearsal and display flights.<br><br>
 
-        Deputy DD / Flight director<br>
-        Maj. Alberto Guzmán F.<br>
-        Mobile: +34 676 56 39 90<br><br>
+          The guide has been divided in four main sections:<br><br>
+          ADMIN<br>
+          In this section you will find details about diplomatic clearance, arrival and departure admin, general
+          facility
+          layout, etc.<br><br>
+          AIRBASE OPS<br>
+          This section provides all approach and departure charts for San Javier as well as the main alternates during
+          the
+          Air Show.<br><br>
+          DISPLAY ORDER<br>
+          This section guides you through the regulations, limitations and instructions that each participant shall
+          comply
+          with during the Air Show.<br><br>
+          EMERGENCIES<br>
+          FLIGHT AND SPECTATORS SAFETY is paramount!
+        </p>
+      </article>
+    </section>
+    <h1>ADMIN<button type="button" onclick="showhide('adminsection')">O</button></h1>
+    <section id="adminsection">
+      <article>
+        <h2>Contact Information<button type="button" onclick="showhide('pcontact')">Show</button></h2>
+        <p class="phonecontainer" id="pcontact">
+          San Javier AB +34 968 189 000<br><br>
+          40th Anniversary Director<br>Lt. Col. Joaquín Aguirre<br>Internal: 868 2400<br>
+          Mobile: +34 639 66 81 18<br><br>
+          DISPLAY<br>
+          Display Director<br>
+          Lt. Col. Carellán<br>
+          Mobile: +34 619 33 10 18<br><br>
 
-        TWR<br>Internal: 834-2765<br>Ext: +34 968 189 363<br><br>
+          Deputy DD / Flight director<br>
+          Maj. Alberto Guzmán F.<br>
+          Mobile: +34 676 56 39 90<br><br>
 
-        Weather service / Oficina de meteorología<br>
-        Internal: 834-2292<br>
-        Ext: + 34 968 189 292<br><br>
-        Flight Safety Officer<br>
-        Capt. Rubén Guzmán<br>
-        Mobile: +34 619 19 77 78<br><br>
+          TWR<br>
+          Internal: 834-2765<br>
+          Ext: +34 968 189 363<br><br>
 
-        Current Ops Desk<br>
-        Capt. Torcal +34 968 189 299<br><br>
+          Weather service / Oficina de meteorología<br>
+          Internal: 834-2292<br>
+          Ext: + 34 968 189 292<br><br>
+          Flight Safety Officer<br>
+          Capt. Rubén Guzmán<br>
+          Mobile: +34 619 19 77 78<br><br>
 
-        Flight OPS (Flight plans)<br>
-        Preparación de vuelos<br>
-        834-2148<br>
-        Ext: +34 968 189 148 / +34 968 189 299<br><br>
+          Current Ops Desk<br>
+          Capt. Torcal +34 968 189 299<br><br>
 
-        ArTransportation<br>
-        Capt. López-Cantí<br>
-        Mobile: +34 673 40 20 59<br><br>
+          Flight OPS (Flight plans)<br>
+          Preparación de vuelos<br>
+          834-2148<br>
+          Ext: +34 968 189 148 / +34 968 189 299<br><br>
 
-        Fuel Suboficial pista<br>
-        834-2146<br>
-        Ext: +34 968 189 146<br><br>
+          ArTransportation<br>
+          Capt. López-Cantí<br>
+          Mobile: +34 673 40 20 59<br><br>
 
-        Press & Public Affairs Officer<br>
-        Capt. Luis Verjano<br>
-        Mobile: +34 655 80 28 29<br><br>
+          Fuel Suboficial pista<br>
+          834-2146<br>
+          Ext: +34 968 189 146<br><br>
 
-        MEDICAL<br>
-        Base infirmary - 834-2145<br>
-        Ext: +34 968 189 145<br>
-        Flight surgeon<br>
-        On call H24 834-2534<br>
-        Ext: 968 189 534<br>
-        Mobile: +34 652 41 76 68<br><br>
+          Press & Public Affairs Officer<br>
+          Capt. Luis Verjano<br>
+          Mobile: +34 655 80 28 29<br><br>
 
-        ON BASE<br>
-        On duty officer(H24)/ Jefe de día<br>
-        Internal: 868-2517<br>
-        Ext: 968 189 517<br>
-        Mobile: +34 696 827 911<br><br>
+          MEDICAL<br>
+          Base infirmary - 834-2145<br>
+          Ext: +34 968 189 145<br>
+          Flight surgeon<br>
+          On call H24 834-2534<br>
+          Ext: 968 189 534<br>
+          Mobile: +34 652 41 76 68<br><br>
 
-        Fire Fighters<br>
-        Internal: 834-2181<br>
-        Ext: + 34 968 189 181<br><br>
-        Military Police Jefe de la Guardia<br>
-        Internal:834-2314<br>
-        Ext: 968 189 314<br><br>
+          ON BASE<br>
+          On duty officer(H24)/ Jefe de día<br>
+          Internal: 868-2517<br>
+          Ext: 968 189 517<br>
+          Mobile: +34 696 827 911<br><br>
 
-        EMERGENCY<br>
-        IN CASE OF EMERGENCY - 112 <br><br>
-        From an internal phone dial the prefix (3numbers) + the extension (4 numbers).
-        If you call from outside, dial 968 189 XXX (the three last numbers of the extension).
-      </p>
-    </article>
-    <article>
-      <h2>Diplomatic-clearance<button type="button" onclick="showhide('pdiplo')">Show</button></h2>
-      <p id="pdiplo">For all the participants to the Airshow (static, display and support), a Diplomatic Clearance is
-        needed.</p>
-    </article>
+          Fire Fighters<br>
+          Internal: 834-2181<br>
+          Ext: + 34 968 189 181<br><br>
+          Military Police Jefe de la Guardia<br>
+          Internal:834-2314<br>
+          Ext: 968 189 314<br><br>
+
+          EMERGENCY<br>
+          IN CASE OF EMERGENCY - 112 <br><br>
+          From an internal phone dial the prefix (3numbers) + the extension (4 numbers).
+          If you call from outside, dial 968 189 XXX (the three last numbers of the extension).
+        </p>
+      </article>
+      <article>
+        <h2>Diplomatic-clearance<button type="button" onclick="showhide('pdiplo')">Show</button></h2>
+        <p id="pdiplo">For all the participants to the Airshow (static, display and support), a Diplomatic Clearance is
+          needed.</p>
+      </article>
+      <article>
+        <h2>Check-in<button type="button" onclick="showhide('pcheckin')">Show</button></h2>
+        <p id="pcheckin">
+          Upon your arrival at SAN JAVIER AB, you will be led to the In Processing Desk for the check-in.
+          <br><br>
+          There you will get a welcome package with ID passes and all the admin details (accommodation, catering,
+          transportation, Flying schedule, etc.). There, you will meet the Liaison Officer assigned to your unit for any
+          support you may need. <br><br>
+          The Current Ops Desk will be your FOCAL POINT during your staying in San Javier ready to fulfill your
+          requests!
+        </p>
+      </article>
+      <article>
+        <h2>Accomodation<button type="button" onclick="showhide('paccomodation')">Show</button></h2>
+        <p id="paccomodation">Air and ground crew personnel will be accommodated in hotels at Los Alcázares, San Javier,
+          Santiago de la
+          Ribera or San Pedro, all inside a 10 km circle from San Javier Airbase.
+          Hotel accommodation will mainly be in single rooms for Officers and double rooms for NCOs. The organization
+          will
+          cover accommodation and breakfast costs, from Thursday/Friday to Monday.
+          All extras shall be paid by each single participant.
+        </p>
+      </article>
+      <article>
+        <h2>Facility overview meals<button type="button" onclick="showhide('pfacility')">Show</button></h2>
+        <p id="pfacility">Breakfast will be available at your hotel. On-base cafeteria is also available.
+          Lunch will be available, free of charge on base from Thursday 12th to Sunday 15th June.
+          Dinner on your own.
+        </p>
+      </article>
+      <article>
+        <h2>SOCIAL EVENTS<button type="button" onclick="showhide('psocial')">Show</button></h2>
+        <p id="psocial">Sun 15 June at 1930LT Hangar party. Place To Be Determined
+          A mementoes presentation is scheduled during this event.
+          Dress code: Flight suits or working outfit.
+        </p>
+      </article>
+      <article>
+        <h2>PRESS/MEDIA<button type="button" onclick="showhide('pmedia')">Show</button></h2>
+        <p id="pmedia">A media operation center will be activated on Saturday 14th, please send to
+          antoniohinojosa69@gmail.com your
+          “media kit”, any photo/video footage and, if possible, any useful information for the narrator.
+          Official narrator for the Airshow will be Mr. Antonio Hinojosa. Phone: + 34 630 543 771
+          Prior to the Airshow day (15th) please bring your mp3 files in order to check/test them accordingly to
+          audio/music service.
+        </p>
+      </article>
+      <article>
+        <h2>TRANSPORTATION<button type="button" onclick="showhide('ptransport')">Show</button></h2>
+        <p id="ptransport">Off-base: from Thu 12 to Mon 16 June transportation from San Javier AB to Hotels and vice
+          versa will be
+          granted
+          by shuttle buses.
+          Buses from Hotels to San Javier AB and back to the Hotels on request through your POC / transportation POC
+          (Lt.
+          Reviejo).
+          More details about timings will be provided during the check-in.
+          An on-call shuttle service will be available on-base through transportation POC.
+        </p>
+      </article>
+      <article>
+        <h2>MEDICAL/ENVIRONMENTAL ISSUES<button type="button" onclick="showhide('pmedical')">Show</button></h2>
+        <p id="pmedical">Throughout your stay in San Javier a Flight Surgeon will be available on duty.
+          Emergencies
+          In case of accident or environmental pollution, you will be required to provide us a list of material and
+          products hazardous to health, safety and environmental, embedded on aircraft and relevant MSDS (Material
+          Safety
+          Data Sheets) i.a.w. European Regulation n° 1272/2008.”
+        </p>
+      </article>
+      <article>
+        <h2>SECURITY/FORCE PROTECTION<button type="button" onclick="showhide('psecurity')">Show</button></h2>
+        <p id="psecurity">Aircrew and Ground personnel must wear visible at all times their personal badge.
+          Individuals shall remain vigilant and alert for possible threats at all times, especially when off base.
+          Any suspicious activity must be reported to military police (Ext. 2314). Or +34 968 189 314 if you call from
+          outside.
+          Force Protection and access control will be active all the time to ensure Air base security.
+          Night-view camera surveillance system will be active.
+          Crypto equipment and sensitive material may be stored into appropriate designated facility.
+        </p>
+      </article>
+      <article>
+        <h2>INSURANCE <button type="button" onclick="showhide('pinsurance')">Show</button></h2>
+        <p id="pinsurance">The organization will contract liability insurance for Saturday 14th and Sunday 15th June.
+          Participants shall produce proof of a valid third party liability insurance covering all flight and ground
+          operations carried out by Units during the deployment at San Javier AB.
+        </p>
+      </article>
+      <article>
+        <h2>PROGRAM OVERVIEW<button type="button" onclick="showhide('pprogram')">Show</button></h2>
+        <p id="pprogram">Thursday 12th June. Arrivals & Rehearsals.
+          Friday 13th Oct. Arrivals & Rehearsals.
+          Saturday 14th 10:00 – 17:00 Open doors day S. Javier AB / Static display / Backup day for rehearsal /
+          Patrouille
+          de France dynamic display / Red arrows arrival
+          Sunday 15th 10:00-16:00 Dynamic displays at Santiago de la Ribera Beach / Departures / Closing ceremony
+          “Hangar
+          Party”
+          Monday 16th Departures
+        </p>
+      </article>
+      <article>
+        <h2></h2>
+        <p></p>
+      </article>
+    </section>
+    <h1>AIRBASE OPS<button type="button" onclick="showhide('opssection')">O</button></h1>
+    <section id="opssection">
+      <article>
+        <h2>ARRIVAL</h2>
+        <h3>ARRIVAL SLOT TIMES</h3>
+        <p>Arrivals should be planned on Thursday 12th and Friday 13th June.
+          Arrival and departure slots will be assigned according to requests drawn from Questionnaire (Aire25 website)
+          and taking into account possible rehearsal events. Display Director’s Flying schedule will be accessible at
+          the Current Ops Desk
+        </p>
+        <h3>ARRIVAL PROCEDURES</h3>
+        <p>Inbound aircraft will be vectored by Barcelona MIL or Valencia RDR. In the vicinity of San Javier CTA will
+          switch to San Javier APP.
+          VMC – VFR entry point (Cabo de Palos / VFR Holding Charlie) to Initial both RWY´s (Break to the sea side, east
+          bound)
+          <img src="/pictures/arrival.png" alt="arrival">
+        </p>
+      </article>
+    </section>
   </main>
 </body>
