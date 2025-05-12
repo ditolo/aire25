@@ -12,7 +12,7 @@
   <script>
     function showhide(param) {
       var x = document.getElementById(param);
-      if (x.style.display == 'none') {
+      if (x.style.display !== 'block') {
         x.style.display = 'block';
       } else {
         x.style.display = 'none';
@@ -53,7 +53,7 @@
 
     main p {
       text-align: left;
-      margin-top: 3vw;
+      padding: 2vw;
       display: none;
     }
 
@@ -188,6 +188,11 @@
         From an internal phone dial the prefix (3numbers) + the extension (4 numbers).
         If you call from outside, dial 968 189 XXX (the three last numbers of the extension).
       </p>
+    </article>
+    <article>
+      <h2>Diplomatic-clearance<button type="button" onclick="showhide('pdiplo')">Show</button></h2>
+      <p id="pdiplo">For all the participants to the Airshow (static, display and support), a Diplomatic Clearance is
+        needed.</p>
     </article>
   </main>
 </body>
