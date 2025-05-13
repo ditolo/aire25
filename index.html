@@ -18,6 +18,7 @@
         x.style.display = 'none';
       }
     }
+
   </script>
   <style>
     * {
@@ -115,11 +116,11 @@
     <hero>
       <img src="/pictures/logo.png" alt="logo" />
     </hero>
-    <h1>WELCOME!<button type="button" onclick="showhide('welcomesection')">O</button></h1>
+    <h1 onclick="toggleChildren">WELCOME!<button type="button" onclick="showhide('welcomesection')">O</button></h1>
     <section id="welcomesection">
 
       <article>
-        <h2>
+        <h2 onclick="showhide('pwelcome')">
           Welcome ADDRESS <button type="button" onclick="showhide('pwelcome')">Show</button>
         </h2>
 
@@ -637,9 +638,77 @@
         <P>Aircraft security will be provided throughout the period. Should different measures be needed, please inform
           Current OPS Desk.</P>
         <H3>ACCESS TO AIRCRAFT</H3>
-        <P></P>
+        <P>Boarding the aircraft by the public is prohibited unless a specific permission is given by the aircraft captain who will hold the responsibility for the public on board.</P>
         <H3>SAFETY FENCE</H3>
+        <p>Static display aircraft will be protected by fences or security lines. Under no circumstances are these fences to be removed. “Walk Through” aircraft will be provided with additional fences for access corridors.</p>
+        <h3>GENERAL BEHAVIOUR</h3>
+        <p>Captains of military aircraft are responsible for the behavior of their crew members and support personnel. Alcohol is strictly prohibited in any aircraft parking / moving or static display area.</p>
+      </article>
+      <article>
+        <h2>DISPLAY</h2>
+        <img src="/pictures/Display.png" alt="Display">
+        <img src="/pictures/DisplayCenter.png" alt="DisplayCenter">
+        <h3>Display axis and DATUM</h3>
+        <p>Datum: 37º 48´ 28.47´´N  000º 47´ 48.85´´W <br>
+Axis: Heading 033/213 <br>
+Perpendicular: Heading 303 <br>
+</p>
+  <img src="/pictures/datum.png" alt="datum">
+  <img src="/pictures/axis.png" alt="axis">
+  <h3>Altimeter setting</h3>
+  <p>QFE will be used at all times. QNH will be issued on request.</p>
+  <h3>VFR Holding</h3>
+  <img src="/pictures/VFRHolding.png" alt="VFRHolding">
+  <p>VFR Holdings A, B and C are 5 NM lenght and Heading 270/090</p>
+  <h3>PHOTO JOIN UP AREA</h3>
+  <p>All participants rejoining with Bronco for a photo will receive specific briefing for that flight. 
+The photo join up area is defined by:
+</p>
+<img src="/pictures/photojoin.png" alt="photojoin">
+<p>2000 – 7000 fts AMSL</p>
+<h3>Communications</h3>
+English will be used as a standard communication language. <br>
+20 minutes before planned taxi, call San Javier GND to confirm the assigned display slot. Display will be on DISPLAY freq. <br>
+Clearance to display will include take-off, display and landing. <br>
+“One minute to land” call to the DD will be appreciated. <br>
+Frequencies to be used during the display are as follows: <br>
+<img src="/pictures/comms.png" alt="comms">
+<p>Might the DD need to stop ongoing Display, he will command: <br>
+- “C/S xx TERMINATE”: discontinue your maneuver and follow the instructions. Display may be continued when the cause for interruption is no longer a factor. <br>
+- “C/S xx STOP-STOP-STOP”: stop your display immediately. The team or solo display will be ordered to land. <br>
+</p>
+<h3>LOCAL AREA OBSTRUCTIONS/AIRFIELD WARNINGS</h3>
+<p>Building in Los Alcázares: 149 ft. <br>
+Building in Santiago de la Ribera 210 ft. <br>
+El Cabezo (mountain) 1024 ft. <br>
+El Carmolí (mountain) 361 ft. <br>
+During the display, as well as during arrival and departure, all pilots shall avoid overflying the villages of San Pedro, 360 Restaurant (1), Los Alcázares and San Javier; when this is not possible, do not fly below 1000 FT AGL. <br>
+There might be considerable bird activity on and around San Javier airfield. <br>
+There is a noise/smoke sensitive wildlife area (2) as depicted below. Please do not activate your smoke system over that area, and do not fly below 500 ft.
+</p>
+<img src="/pictures/localarea.png" alt="localarea">
       </article>
     </section>
+    <h1 onclick = "showhide('emersection')">EMERGENCIES</h1>
+    <section id="emersection">
+      <p>Each pilot will take all appropriate actions to handle the aircraft emergency and will notify the DD as soon as possible, stating the nature of emergency and the assistance required.
+Should the emergency lead to possible runway closure, pilots will be requested, if possible, to divert to the alternate airfield.
+</p>
+<h2>Hot brakes</h2>
+<p>In case of suspected hydrazine contamination and/or hot brakes, the pilot will inform the DD and he will be directed to park the aircraft on the dedicated spot, waiting for Fire Fighters assistance.</p>
+<h2>Radio Failure</h2>
+<p>If a radio failure condition occurs during display, the pilot must immediately interrupt the aerobatic program, perform a low pass over the runway rocking the wings and perform a landing for the runway in use. 
+If radio contact is lost in the holding area, attempt to contact San Javier ATC using any published frequency. In the event of a total R/T failure, depart the holding avoiding the display area and proceed to diversion, carrying out standard R/T failure procedures.
+</p>    
+<h2>Standard TWR Signals</h2>
+<img src="/pictures/signals.png" alt="signals">
+<h2>Jettison / Fuel Dump Areas</h2>
+<p>Fuel dump is only authorized in case of emergency. Fly over the Mediterranean Sea above 5000 ft. <br><br>
+Perform jettison at 1000ft avoiding populated areas. Recommended area: Northwest of El Carmolí (200/5).
+</p>
+<h2>Ejection Area</h2>
+<p>In case of a controlled ejection, if situation permits, proceed to 200/5nm (Northwest of El Carmolí – Small conical mountain). Try to steer your aircraft to the sea or to any unpopulated area before the ejection.</p>
+
+</section>
   </main>
 </body>
