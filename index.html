@@ -30,6 +30,26 @@
       word-break: normal;
       overflow-wrap: break-word;
     }
+    
+    header {
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      header p{
+        max-width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        color: rgb(215, 83, 60);
+        margin:2rem;
+        text-transform: uppercase;
+        border: 1px solid rgb(215, 83, 60);
+        width:fit-content;
+        padding: 1rem;
+        box-shadow: 2px 2px 0px rgb(215, 83, 60); 
+      }
 
     h1 {
       padding: 2vw;
@@ -92,7 +112,7 @@
 
     img {
       margin-top: 1vw;
-      width: 100%;
+      max-width: 100%;
     }
 
     table,
@@ -104,38 +124,39 @@
       font-size: 2vw;
     }
 
-    a {
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      font-size: 6vw;
-      text-decoration: none;
-      color: blue;
-
-    }
+    
 
     @media screen and (min-width:600px) {
       * {
-        font-size: 1vw;
+        font-size: 1rem;
       }
-
-      header {
-        max-width: 900px;
+      #logo{
+      max-width: 45%;
+      margin-left: 0;
+    }
+     
+    header{
+      flex-direction: row;
+    }
+      header p{
+        font-size: 4rem;
+        max-width: 50%;
+        transform: rotate(30deg);
       }
 
       img {
-        width: 30%;
-        margin-left: 35%;
+        max-width: 100%;
       }
 
-      table {
-        font-size: 2px;
+      table,td,th,tr {
+        align-content: center;
+        font-size: 1rem;
       }
 
       h1 {
         height: 2vw;
-        padding: 0;
-        margin: 2px;
+        padding: 0.5rem;
+        margin: 0.5rem;
         align-content: center;
         align-items: center;
         width: 100%;
@@ -159,9 +180,8 @@
 
 <body>
   <header>
-    <hero>
-      <img src="/pictures/logo.png" alt="logo" />
-    </hero>
+    <img id="logo" src="/pictures/logo.png" alt="logo" />
+    <p>Crew Guide</p>
   </header>
 
   <main>
@@ -593,6 +613,7 @@
       <article>
         <h2>Display Regulation</h2>
         <p><br></p>
+        <div style="display: flex; justify-content: center;">
         <table>
           <tr>
             <th>Distance Line</th>
@@ -643,6 +664,7 @@
             <td colspan="3">300ft AGL</td>
           </tr>
         </table>
+        </div>
         <P>
           <br>Participants must strictly adhere to such restrictions, with no exceptions, unless national authorities or
           manufactures dictate more restrictive limits.
@@ -767,11 +789,12 @@
     </section>
     <h1 onclick="showhide('emersection')">EMERGENCIES</h1>
     <section id="emersection">
+      <article>
       <p>Each pilot will take all appropriate actions to handle the aircraft emergency and will notify the DD as soon as
         possible, stating the nature of emergency and the assistance required.
         Should the emergency lead to possible runway closure, pilots will be requested, if possible, to divert to the
         alternate airfield.
-      </p>
+      </p></article>
       <article>
         <h2>Hot brakes</h2>
 
@@ -808,5 +831,39 @@
           conical mountain). Try to steer your aircraft to the sea or to any unpopulated area before the ejection.</p>
       </article>
     </section>
+          <h1 onclick="showhide('currentopssection')">Current Ops</h1>  
+    <section id="currentopssection">
+      <article>
+        <h2>Current OPS Desk</h2>
+        <p>Current OPS Desk will be your FOCAL POINT during your staying in San Javier ready to fulfill your requests!
+          <br><br>
+          Current OPS Desk will be located in the Main Building, 1st floor, room 101.
+        </p>
+      </article>
+      <article>
+        <h2>Current Weather</h2>
+        <pre>TAF LELC 151100Z 1512/1612 13010KT 9999 FEW045 TX22/1514Z TN13/1606Z
+BECMG 1512/1516 25009KT
+BECMG 1610/1612 14010KT
+TEMPO 1512/1520 4000 SHRA SCT030TCU
+PROB40 TEMPO 1514/1518 3000 TSRA FEW030CB</pre><br><br>
+        <pre>TAF LEAB 151100Z 1512/1612 31006KT 9999 SCT040 TX18/1515Z TN09/1605Z
+TEMPO 1512/1520 VRB15G25KT RA SHRA FEW030TCU
+PROB40 TEMPO 1514/1519 4000 TSRA FEW035CB
+BECMG 1518/1520 VRB03KT
+TEMPO 1600/1610 4000 BR BKN014
+PROB30 TEMPO 1603/1609 0400 FG VV002</pre><br><br>
+        <pre>TAF LERI 151100Z 1512/1612 VRB03KT 9999 FEW045 TX22/1514Z TN13/1606Z
+TEMPO 1512/1516 30015KT
+TEMPO 1512/1520 4000 SHRA SCT030TCU
+PROB40 TEMPO 1514/1518 3000 TSRA FEW030CB</pre><br><br>
+      <a  href="https://metar-taf.com/LELC" target="_blank" id="metartaf-8KA9JL5j" style="font-size:18px; font-weight:500; color:#000; width:350px; height:278px; display:block">METAR San Javier Airport</a>
+      <script async defer crossorigin="anonymous" src="https://metar-taf.com/embed-js/LELC?layout=landscape&qnh=hPa&rh=rh&target=8KA9JL5j"></script>
+      <a target="_blank" href="https://metar-taf.com/LEAB" id="metartaf-xBtXnsGW" style="font-size:18px; font-weight:500; color:#000; width:350px; height:278px; display:block">METAR Albacete Airport / Los Llanos Air Base</a>
+      <script async defer crossorigin="anonymous" src="https://metar-taf.com/embed-js/LEAB?layout=landscape&qnh=hPa&rh=rh&target=xBtXnsGW"></script>
+      </article>
+
+    </section>
   </main>
+  
 </body>
