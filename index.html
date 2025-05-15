@@ -131,7 +131,12 @@
     white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word; 
     }
-
+    .widgetcenter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
     @media screen and (min-width:600px) {
       * {
         font-size: 1rem;
@@ -863,11 +868,13 @@ PROB30 TEMPO 1603/1609 0400 FG VV002</pre><br><br>
 TEMPO 1512/1516 30015KT
 TEMPO 1512/1520 4000 SHRA SCT030TCU
 PROB40 TEMPO 1514/1518 3000 TSRA FEW030CB</pre><br><br>
+<div class="widgetcenter">
       <a  href="https://metar-taf.com/LELC" target="_blank" id="metartaf-8KA9JL5j" style="font-size:18px; font-weight:500; color:#000; width:350px; height:278px; display:block">METAR San Javier Airport</a>
       <script async defer crossorigin="anonymous" src="https://metar-taf.com/embed-js/LELC?layout=landscape&qnh=hPa&rh=rh&target=8KA9JL5j"></script>
       <a target="_blank" href="https://metar-taf.com/LEAB" id="metartaf-xBtXnsGW" style="font-size:18px; font-weight:500; color:#000; width:350px; height:278px; display:block">METAR Albacete Airport / Los Llanos Air Base</a>
       <script async defer crossorigin="anonymous" src="https://metar-taf.com/embed-js/LEAB?layout=landscape&qnh=hPa&rh=rh&target=xBtXnsGW"></script>
-      </article>
+    </div>  
+    </article>
 
     </section>
   </main>
