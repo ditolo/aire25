@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Crew info for Aire 25">
   <meta name="author" content="Diego Torcal">
   <meta name="keywords" content="aire25">
   <title>Crew Info</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
   <script>
     function showhide(param) {
       var x = document.getElementById(param);
@@ -18,17 +18,27 @@
         x.style.display = 'none';
       }
     }
-    function x(param) {
-      fetch('https://aviationweather.gov/api/data/metar?ids=LELC', {
+    async function x(block,url) {
+      const options = {
         method: 'GET',
-        mode: 'no-cors',
-      })
-        .then(response => {
-          console.log(response.body);
-        })
-        .then(data => {
-          console.log(data);
-        })
+        headers: {
+          'x-rapidapi-key': '6302ca5757msh83e9590874f1290p1648ccjsn4c6731da3d7e',
+          'x-rapidapi-host': 'metartafdecoder.p.rapidapi.com',
+          'Accept-Language': 'en'
+        }
+      };
+
+      try {
+        const response = await fetch(url, options);
+        const result = await response.json();
+        console.log(result);
+        let elementopre = await document.getElementById(block);
+        console.log(elementopre);
+        elementopre.innerHTML = await result.message;
+        console.log(elementopre);
+      } catch (error) {
+        console.error(error);
+      }
     }
   </script>
   <style>
@@ -41,6 +51,12 @@
       padding: 0;
       word-break: normal;
       overflow-wrap: break-word;
+    }
+
+    .weatherbutton{
+      margin-left: 1vw;
+      margin-bottom: 1vw;
+      margin-top: 1vw;
     }
 
     header {
@@ -73,6 +89,7 @@
       justify-content: center;
 
     }
+
     .currentweather {
       display: none;
     }
@@ -85,7 +102,6 @@
       justify-content: space-between;
 
       margin-bottom: 1rem
-
     }
 
     h3 {
@@ -152,6 +168,8 @@
       white-space: -o-pre-wrap;
       /* Opera 7 */
       word-wrap: break-word;
+      margin-left: 2vw;
+      margin-bottom: 1rem;
     }
 
     .widgetcenter {
@@ -886,46 +904,46 @@
     <h1 onclick="showhide('currentweathersection')">Current Weather</h1>
     <section id="currentweathersection">
       <article>
-        <h2 onclick="showhide('LELC')">LELC</h2>
-        <div id="LELC" class="currentweather">
-
-          <button onclick="x('metar')">Update</button>
-          <pre id="metar">TAF LELC 151100Z 1512/1612 13010KT 9999 FEW045 TX22/1514Z TN13/1606Z
-
-BECMG 1512/1516 25009KT
-BECMG 1610/1612 14010KT
-TEMPO 1512/1520 4000 SHRA SCT030TCU
-PROB40 TEMPO 1514/1518 3000 TSRA FEW030CB
-          </pre>
-          <img src="/pictures/grametLELC.png" alt="grametLELC">
+        <h2 onclick="showhide('genweather')">General Weather</h2>
+        <article id="genweather" class="currentweather">
           <div class="widgetcenter">
             <a href="https://metar-taf.com/LELC" target="_blank" id="metartaf-8KA9JL5j"
               style="font-size:18px; font-weight:500; color:#000; width:350px; height:278px; display:block">METAR San
               Javier Airport</a>
             <script async defer crossorigin="anonymous"
               src="https://metar-taf.com/embed-js/LELC?layout=landscape&qnh=hPa&rh=rh&target=8KA9JL5j"></script>
+              <img src="/pictures/grametLELC.png" alt="grametLELC">
           </div>
+        </article>
+        <h2 onclick="showhide('LELC')">LELC</h2>
+        <div id="LELC" class="currentweather">
+          <button class="weatherbutton" onclick="x('metarLELC','https://metartafdecoder.p.rapidapi.com/metar/LELC')">Update METAR</button>
+          <pre id="metarLELC">
+          </pre>
+          <button class="weatherbutton" onclick="x('taforLELC','https://metartafdecoder.p.rapidapi.com/taf/LELC')">Update TAF</button>
+          <pre id="taforLELC"></pre>
         </div>
         <h2 onclick="showhide('LEAB')">LEAB</h2>
         <div id="LEAB" class="currentweather">
-          <pre>TAF LEAB 151100Z 1512/1612 31006KT 9999 SCT040 TX18/1515Z TN09/1605Z
-TEMPO 1512/1520 VRB15G25KT RA SHRA FEW030TCU
-PROB40 TEMPO 1514/1519 4000 TSRA FEW035CB
-BECMG 1518/1520 VRB03KT
-TEMPO 1600/1610 4000 BR BKN014
-PROB30 TEMPO 1603/1609 0400 FG VV002
+          <button class="weatherbutton" onclick="x('metarLEAB','https://metartafdecoder.p.rapidapi.com/metar/LEAB')">Update METAR</button>
+          <pre id="metarLEAB">
             </pre>
+            <button class="weatherbutton" onclick="x('taforLEAB','https://metartafdecoder.p.rapidapi.com/taf/LEAB')">Update TAF</button>
+            <pre id="taforLEAB"></pre>
         </div>
         <h2 onclick="showhide('LERI')">LERI</h2>
         <div id="LERI" class="currentweather">
-          <pre>TAF LERI 151100Z 1512/1612 VRB03KT 9999 FEW045 TX22/1514Z TN13/1606Z
-TEMPO 1512/1516 30015KT
-TEMPO 1512/1520 4000 SHRA SCT030TCU
-PROB40 TEMPO 1514/1518 3000 TSRA FEW030CB</pre>
+          <button class="weatherbutton" onclick="x('metarLERI','https://metartafdecoder.p.rapidapi.com/metar/LERI')">Update METAR</button>
+          <pre id="metarLERI"></pre>
+          <button class="weatherbutton" onclick="x('taforLERI','https://metartafdecoder.p.rapidapi.com/taf/LERI')">Update TAF</button>
+          <pre id="taforLERI"></pre>
         </div>
         <h2 onclick="showhide('LEMI')">LEMI</h2>
         <div id="LEMI" class="currentweather">
-          <pre>TAF LEMI 151100Z 1512/1612 31006KT 9999 SCT040 TX18/1515Z TN09/1605Z</pre>
+          <button class="weatherbutton" onclick="x('metarLEMI','https://metartafdecoder.p.rapidapi.com/metar/LEMI')">Update METAR</button>
+          <pre id="metarLEMI"></pre>
+          <button class="weatherbutton" onclick="x('taforLEMI','https://metartafdecoder.p.rapidapi.com/taf/LEMI')">Update TAF</button>
+          <pre id="taforLEMI"></pre>
         </div>
       </article>
     </section>
